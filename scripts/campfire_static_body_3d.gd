@@ -20,3 +20,4 @@ func left_click():
 		player.have_log = false
 		player.get_node("WoodLog").hide()
 		campfire_drop.play()
+		%Statistics.text = "Wood: " + str(fuel)

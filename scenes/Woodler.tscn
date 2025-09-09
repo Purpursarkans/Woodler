@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://ca8qtea2dvucc"]
+[gd_scene load_steps=65 format=3 uid="uid://ca8qtea2dvucc"]
 
 [ext_resource type="Script" uid="uid://cp7hqhytycb5y" path="res://scripts/Woodler.gd" id="1_qtgs7"]
 [ext_resource type="AudioBusLayout" uid="uid://bmpruuq2ta05c" path="res://Woodler_bus_layout.tres" id="2_fev2o"]
@@ -26,6 +26,9 @@
 [ext_resource type="PackedScene" uid="uid://bx7k7jxwisjld" path="res://scenes/wood_log.tscn" id="26_g4o0j"]
 [ext_resource type="AudioStream" uid="uid://bx0v6jsh62r7l" path="res://sound/CC0 1.0 Universal/SFX_wood_fall_pile_bunch_stone_floor/PickUpLog.ogg" id="27_bqetd"]
 [ext_resource type="SystemFont" uid="uid://bpi05ko24khtx" path="res://new_system_font.tres" id="28_l6bop"]
+[ext_resource type="Script" uid="uid://58px84qyp5iv" path="res://scripts/menu_label_duo_language.gd" id="28_pgf8t"]
+[ext_resource type="SystemFont" uid="uid://bna46bpkcyl6q" path="res://Fonts/new_system_font.tres" id="29_nc3js"]
+[ext_resource type="Script" uid="uid://crq7q3r3gyu4u" path="res://scripts/statistics.gd" id="30_1xwyi"]
 [ext_resource type="PackedScene" uid="uid://c01oh5ddve7il" path="res://scenes/control.tscn" id="31_e16ch"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fakw2"]
@@ -481,3 +484,17 @@ transparent_bg = true
 size = Vector2i(992, 507)
 
 [node name="Control" parent="EscapeMenu/GUI/guiBody3D/guiDisplay/SubViewport" instance=ExtResource("31_e16ch")]
+
+[node name="MenuLabelDuoLanguage" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.80534, -2.09501, 5.75614)
+text = "MENU_
+TEMPLATE"
+script = ExtResource("28_pgf8t")
+
+[node name="Statistics" type="Label3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 4, 1.7, 5.80606)
+pixel_size = 0.0085
+text = "Wood: 0"
+font = ExtResource("29_nc3js")
+script = ExtResource("30_1xwyi")

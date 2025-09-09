@@ -103,6 +103,10 @@ show_cursor={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://locale/locale.en.translation", "res://locale/locale.ru.translation")
+
 [physics]
 
 3d/run_on_separate_thread=true

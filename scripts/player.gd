@@ -117,24 +117,24 @@ func _physics_process(delta):
 			focused_control.release_focus()
 	
 	##show cursor if alt pressed
-	#if Input.is_action_just_pressed("show_cursor"):
-		#show_cursor = true
-		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		#Input.warp_mouse(last_mouse_position)
-	#if Input.is_action_just_released("show_cursor"):
-		#show_cursor = false
-		#last_mouse_position = get_viewport().get_mouse_position()
-		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	##toggle corsor 
-	
 	if Input.is_action_just_pressed("show_cursor"):
-		show_cursor = !show_cursor
-		if show_cursor:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			Input.warp_mouse(last_mouse_position)
-		else:
-			last_mouse_position = get_viewport().get_mouse_position()
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		show_cursor = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		Input.warp_mouse(last_mouse_position)
+	if Input.is_action_just_released("show_cursor"):
+		show_cursor = false
+		last_mouse_position = get_viewport().get_mouse_position()
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		
+	##toggle corsor 
+	#if Input.is_action_just_pressed("show_cursor"):
+		#show_cursor = !show_cursor
+		#if show_cursor:
+			#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			#Input.warp_mouse(last_mouse_position)
+		#else:
+			#last_mouse_position = get_viewport().get_mouse_position()
+			#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	
 	
@@ -210,7 +210,7 @@ func _input(e : InputEvent) -> void:
 
 @onready var camera_node: Camera3D = %Camera3D
 @onready var player_ray_cast_3d: RayCast3D = %PlayerRayCast3D
-@onready var ray_length: float = player_ray_cast_3d.target_position.y
+@onready var ray_length: float = player_ray_cast_3d.target_position.y * 1.5
 
 @export var collision_masks: int = 3
 

@@ -1,0 +1,6 @@
+[gd_resource type="SystemFont" format=3 uid="uid://bna46bpkcyl6q"]
+
+[resource]
+font_names = PackedStringArray("Monocraft")
+multichannel_signed_distance_field = true
+msdf_pixel_range = 12
