@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://ca8qtea2dvucc"]
+[gd_scene load_steps=67 format=3 uid="uid://ca8qtea2dvucc"]
 
 [ext_resource type="Script" uid="uid://cp7hqhytycb5y" path="res://scripts/Woodler.gd" id="1_qtgs7"]
 [ext_resource type="AudioBusLayout" uid="uid://bmpruuq2ta05c" path="res://Woodler_bus_layout.tres" id="2_fev2o"]
@@ -30,6 +30,7 @@
 [ext_resource type="SystemFont" uid="uid://bna46bpkcyl6q" path="res://Fonts/new_system_font.tres" id="29_nc3js"]
 [ext_resource type="Script" uid="uid://crq7q3r3gyu4u" path="res://scripts/statistics.gd" id="30_1xwyi"]
 [ext_resource type="PackedScene" uid="uid://c01oh5ddve7il" path="res://scenes/control.tscn" id="31_e16ch"]
+[ext_resource type="Script" uid="uid://djcgs853nhb0i" path="res://scripts/fps.gd" id="33_wl236"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fakw2"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -168,6 +169,8 @@ size = Vector3(9.56586, 4.5603, 0.280151)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_5e5r5"]
 viewport_path = NodePath("EscapeMenu/GUI/guiBody3D/guiDisplay/SubViewport")
+
+[sub_resource type="BoxMesh" id="BoxMesh_eb5it"]
 
 [node name="Woodler" type="Node3D"]
 script = ExtResource("1_qtgs7")
@@ -330,12 +333,13 @@ metadata/left_click = true
 shape = SubResource("ConcavePolygonShape3D_s1ey0")
 
 [node name="WoodSpawner" type="Node3D" parent="." node_paths=PackedStringArray("player")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -11.8343)
 script = ExtResource("25_l5nhc")
 player = NodePath("../Player")
+step = 1
 
 [node name="WoodLog" parent="WoodSpawner" node_paths=PackedStringArray("player", "spawner") instance=ExtResource("26_g4o0j")]
-transform = Transform3D(0.554672, 0, 0, 0, -7.08111e-08, -0.554672, 0, 1.61997, -2.42455e-08, 0, 0, -3)
+transform = Transform3D(0.554672, 0, 0, 0, -7.08111e-08, -0.554672, 0, 1.61997, -2.42455e-08, 0, 0, 14)
 player = NodePath("../../Player")
 spawner = NodePath("..")
 
@@ -498,3 +502,22 @@ pixel_size = 0.0085
 text = "Wood: 0"
 font = ExtResource("29_nc3js")
 script = ExtResource("30_1xwyi")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="fence" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(22.5351, 0, 0, 0, 1, 0, 0, 0, 0.101875, 0, 0.5, -23)
+mesh = SubResource("BoxMesh_eb5it")
+
+[node name="fence2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-9.85041e-07, 0, -0.101875, 0, 1, 0, 22.5351, 0, -4.45311e-09, 11, 0.5, -12)
+mesh = SubResource("BoxMesh_eb5it")
+
+[node name="fence3" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-9.85041e-07, 0, -0.101875, 0, 1, 0, 22.5351, 0, -4.45311e-09, -11, 0.5, -12)
+mesh = SubResource("BoxMesh_eb5it")
+
+[node name="FPS" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("33_wl236")
