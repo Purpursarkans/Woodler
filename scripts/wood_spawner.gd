@@ -1,5 +1,8 @@
-@tool
+#@tool
 extends Node3D
+
+#@export_tool_button("spawn") var spawn = multiSpawn
+
 
 @export var player : CharacterBody3D
 
@@ -13,7 +16,7 @@ extends Node3D
 
 var woodLog = preload("uid://bx7k7jxwisjld") #wood_log.tscn
 
-@export_tool_button("spawn") var spawn = multiSpawn
+
 
 func multiSpawn():
 	for i in 1:
@@ -40,7 +43,6 @@ func _spawn():
 	log.owner = get_tree().edited_scene_root
 	log.position = Vector3(get_random_number_with_step(min_x,max_x,step),0,get_random_number_with_step(min_y,max_y,step))
 	log.rotation.y = randf_range(0.0, TAU)
-	print_debug(log.rotation.y)
 	logs += 1
 
 func get_random_number_with_step(min_val: float, max_val: float, step: float) -> float:
