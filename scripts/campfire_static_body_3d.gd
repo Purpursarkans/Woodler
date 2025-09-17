@@ -14,9 +14,9 @@ var fuer_per_sec1 : bool = false
 func _process(delta: float) -> void:
 	%Statistics.text = "Wood: " + str(fuel)
 	fuel += fuer_per_sec
-	if fuel > 10 && !fuer_per_sec1:
-		fuer_per_sec += 0.1 * delta
-		fuer_per_sec1 = true
+	#if fuel > 10 && !fuer_per_sec1:
+		#fuer_per_sec += 0.1 * delta
+		#fuer_per_sec1 = true
 
 @onready var player = %Player
 @onready var campfire_drop: AudioStreamPlayer3D = %CampfireDrop

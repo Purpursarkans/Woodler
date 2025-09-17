@@ -117,24 +117,24 @@ func _physics_process(delta):
 			focused_control.release_focus()
 	
 	##show cursor if alt pressed
-	if Input.is_action_just_pressed("show_cursor"):
-		show_cursor = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		Input.warp_mouse(last_mouse_position)
-	if Input.is_action_just_released("show_cursor"):
-		show_cursor = false
-		last_mouse_position = get_viewport().get_mouse_position()
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	#if Input.is_action_just_pressed("show_cursor"):
+		#show_cursor = true
+		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		#Input.warp_mouse(last_mouse_position)
+	#if Input.is_action_just_released("show_cursor"):
+		#show_cursor = false
+		#last_mouse_position = get_viewport().get_mouse_position()
+		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
 	##toggle corsor 
-	#if Input.is_action_just_pressed("show_cursor"):
-		#show_cursor = !show_cursor
-		#if show_cursor:
-			#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			#Input.warp_mouse(last_mouse_position)
-		#else:
-			#last_mouse_position = get_viewport().get_mouse_position()
-			#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	if Input.is_action_just_pressed("show_cursor"):
+		show_cursor = !show_cursor
+		if show_cursor:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			Input.warp_mouse(last_mouse_position)
+		else:
+			last_mouse_position = get_viewport().get_mouse_position()
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	
 	

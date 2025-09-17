@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 			_spawn()
 
 
-var logs : int
+var logs : int = 0
 
 func _spawn():
 	var log = woodLog.instantiate()

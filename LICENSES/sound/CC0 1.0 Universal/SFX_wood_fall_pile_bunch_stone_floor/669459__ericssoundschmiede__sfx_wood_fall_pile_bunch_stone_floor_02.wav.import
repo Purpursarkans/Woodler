@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cfilphmhvaepw"
+path="res://.godot/imported/669459__ericssoundschmiede__sfx_wood_fall_pile_bunch_stone_floor_02.wav-4a1636c07ae6254e40532a57695acc1e.sample"
+
+[deps]
+
+source_file="res://LICENSES/sound/CC0 1.0 Universal/SFX_wood_fall_pile_bunch_stone_floor/669459__ericssoundschmiede__sfx_wood_fall_pile_bunch_stone_floor_02.wav"
+dest_files=["res://.godot/imported/669459__ericssoundschmiede__sfx_wood_fall_pile_bunch_stone_floor_02.wav-4a1636c07ae6254e40532a57695acc1e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

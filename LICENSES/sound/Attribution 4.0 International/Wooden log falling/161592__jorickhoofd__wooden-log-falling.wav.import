@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://lheq05gvtr6j"
+path="res://.godot/imported/161592__jorickhoofd__wooden-log-falling.wav-964870b1c467264dae6473c234a99d8f.sample"
+
+[deps]
+
+source_file="res://LICENSES/sound/Attribution 4.0 International/Wooden log falling/161592__jorickhoofd__wooden-log-falling.wav"
+dest_files=["res://.godot/imported/161592__jorickhoofd__wooden-log-falling.wav-964870b1c467264dae6473c234a99d8f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

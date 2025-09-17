@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://drf358a4xexec"
+path="res://.godot/imported/676545__rthijs__footsteps-in-the-snow-4-3.ogg-6c59969e9ec84d0986efa4239293e578.oggvorbisstr"
+
+[deps]
+
+source_file="res://LICENSES/sound/CC0 1.0 Universal/Footsteps in the snow 4/676545__rthijs__footsteps-in-the-snow-4-3.ogg"
+dest_files=["res://.godot/imported/676545__rthijs__footsteps-in-the-snow-4-3.ogg-6c59969e9ec84d0986efa4239293e578.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

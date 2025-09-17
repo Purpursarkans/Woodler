@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cx75ulqwhq28n"
+path="res://.godot/imported/352175__inspectorj__dropping-wood-l.ogg-2ed3c1e04b9049b5a1506a36d5b0e85a.oggvorbisstr"
+
+[deps]
+
+source_file="res://LICENSES/sound/Attribution 4.0 International/Dropping, Wood/352175__inspectorj__dropping-wood-l.ogg"
+dest_files=["res://.godot/imported/352175__inspectorj__dropping-wood-l.ogg-2ed3c1e04b9049b5a1506a36d5b0e85a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
