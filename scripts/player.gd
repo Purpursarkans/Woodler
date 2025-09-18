@@ -40,7 +40,6 @@ func _ready():
 	#global_position = %StartPosition.global_position
 	#global_position = %EscapePosition.global_position
 
-
 func mouse_action_object(action_object, mouse_button):
 	#print_debug(PlayerRayCast)
 	#action_object = PlayerRayCast.get_collider()
